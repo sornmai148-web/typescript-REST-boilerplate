@@ -8,7 +8,12 @@
     "check:venerable": "yarn audit --fix",
     "run:develope": "nodemon --watch src --ext ts,json --exec \"ts-node -r tsconfig-paths/register\" src/server.ts",
     "dev": "yarn check:venerable && yarn run:develope",
-    "lint": "eslint 'src/**/*.ts'"
+    "lint": "eslint 'src/**/*.ts'",
+    "dk:build": "docker build -t express-typescript:latest .",
+    "dk:dev:up": "docker compose --profile app up -d",
+    "dk:dev:down": "docker compose --profile app down",
+    "dk:db:up": "docker compose --profile database up -d",
+    "dk:db:down": "docker compose --profile database down"
   },
   "dependencies": {
     "dotenv": "17.2.3",
