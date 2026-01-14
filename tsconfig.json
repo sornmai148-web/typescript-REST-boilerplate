@@ -12,6 +12,7 @@
     "paths": {
       "@config/*": ["config/*"],
       "@controller/*": ["controller/*"],
+      "@services/*": ["services/*"],
       "@middleware/*": ["middleware/*"],
       "@model/*": ["model/*"],
       "@routes/*": ["routes/*"]

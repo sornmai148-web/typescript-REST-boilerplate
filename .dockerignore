@@ -1,0 +1,28 @@
+# Node modules (install inside Docker, don't copy from host)
+node_modules
+
+# Build output
+dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git
+.git
+.gitignore
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Optional: uploads or temporary files
+uploads/
+tmp/
+.cache/

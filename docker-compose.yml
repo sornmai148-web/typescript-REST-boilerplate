@@ -1,0 +1,20 @@
+# docker-compose.yml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: express_app
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    # Mount local code for live development (optional)
+    # volumes:
+    #   - ./src:/usr/src/app/src
+    #   - ./package.json:/usr/src/app/package.json
+    #   - ./yarn.lock:/usr/src/app/yarn.lock
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      # - PORT=3000
